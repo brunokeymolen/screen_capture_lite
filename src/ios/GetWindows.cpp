@@ -52,7 +52,7 @@ namespace Screen_Capture
             uint32_t windowid=0;
             auto dict = static_cast<CFDictionaryRef>(CFArrayGetValueAtIndex(windowList, i));
             auto cfwindowname = static_cast<CFStringRef>(CFDictionaryGetValue(dict, kCGWindowName));
-            IF (cfwindowname == NULL) {
+            if (cfwindowname == NULL) {
                 continue;
             }
             CFStringGetCString(cfwindowname, w.Name, sizeof(w.Name), kCFStringEncodingUTF8);
